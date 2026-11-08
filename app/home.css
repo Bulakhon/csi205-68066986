@@ -1,0 +1,109 @@
+
+.home-content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 10px auto 20px;
+  padding: 0 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.home-card {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.instructor-section {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f1f5f9;
+}
+
+.instructor-section img {
+  display: block;
+  width: 100%;
+  height: 300px;
+
+  /* แสดงรูปโดยไม่บีบสัดส่วน */
+  object-fit: contain;
+  object-position: center;
+
+  border-radius: 8px;
+}
+
+.course-section {
+  min-width: 0;
+  padding: 8px 0;
+  line-height: 1.7;
+}
+
+.course-section h1 {
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  color: #2563eb;
+  font-size: 25px;
+  line-height: 1.4;
+  border-bottom: 2px solid #dbeafe;
+}
+
+.course-section h2 {
+  margin: 0 0 15px;
+  color: #1e293b;
+  font-size: 20px;
+}
+
+.course-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.course-section li {
+  padding: 16px;
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.course-section li strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #1d4ed8;
+  font-size: 17px;
+}
+
+@media (max-width: 650px) {
+  .home-content {
+    padding: 0 12px;
+  }
+
+  .home-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 16px;
+  }
+
+  .instructor-section img {
+    height: 320px;
+    object-fit: contain;
+  }
+
+  .course-section h1 {
+    font-size: 21px;
+  }
+
+  .course-section h2 {
+    font-size: 18px;
+  }
+}

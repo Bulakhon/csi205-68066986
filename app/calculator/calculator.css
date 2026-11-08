@@ -1,0 +1,77 @@
+.calculator-body {
+    display: grid;
+    place-items: center;
+    padding: 24px 0;
+}
+
+.calculator-body .calculator {
+    font-family: sans-serif;
+    width: 280px;
+}
+
+.calculator-body .outer {
+    border: 3px solid black;
+    border-radius: 18px 18px 0 0;
+    background-color: rgb(86, 86, 86);
+}
+
+.calculator-body .inner {
+    border: 5px solid gray;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: lightgray;
+    background-image: linear-gradient(to bottom, white, grey);
+}
+
+.calculator-body .screen {
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 2.75rem;
+    background-color: rgb(230, 254, 254);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 0.5rem 0.25rem 0.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.calculator-body .btn-row {
+    margin-top: 5px;
+}
+
+.calculator-body .btn-row button {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: black;
+    cursor: pointer;
+}
+
+.calculator-body .btn-row button:disabled {
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+.calculator-body .btn-row .green {
+    background-color: rgb(172, 252, 172);
+}
+
+.calculator-body .btn-row .red {
+    background-color: rgb(243, 104, 12);
+}
+
+.calculator-body .btn-row .purple {
+    background-color: rgb(167, 143, 255);
+}
+
+.calculator-body .student {
+    color: rgb(224, 223, 223);
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.05rem;
+}
