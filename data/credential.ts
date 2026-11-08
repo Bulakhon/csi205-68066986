@@ -30,26 +30,29 @@ const users: User[] = [
     },
 ]
 
-type Credential = {
-    token: string
-    email: string
-    name: string
-    role: string
+export type UserCredential = {
+    token: string;
+    email: string;
+    name: string;
+    role: string;
 }
 
-export const login = (email: string, pass: string): Promise<Credential | string> => {
+export const login = (
+    email: string,
+    pass: string
+): Promise<UserCredential> => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (Math.random() <= 0.8) {
                 const user = users.find((u) => u.email === email && u.password === pass)
                 if (user === undefined) {reject('user is invalid') 
                     return}
-                const newCredential: Credential = {
-                    token: crypto.randomUUID(),
-                    email: user.email,
-                    name: user.name,
-                    role: user.role
-                }
+                const newCredential: UserCredential = {
+    token: crypto.randomUUID(),
+    email: user.email,
+    name: user.name,
+    role: user.role
+}
                 resolve(newCredential)
             } else {
                 reject('connection refused')

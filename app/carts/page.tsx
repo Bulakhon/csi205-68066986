@@ -29,7 +29,7 @@ export default function Page() {
           <div key={product.id}>
           <div className="relative w-37.5 h-37.5">
             <Image
-              src={product.thumnailUrl}
+              src={product.thumbnailUrl}
               alt="image"
               width={150}
               height={150}

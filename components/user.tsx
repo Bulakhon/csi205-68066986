@@ -4,17 +4,19 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Badge } from "@/components/tailgrids/core/badge";
+import type { UserCredential } from "@/data/credential";
 
-type Credential = {
-  token: string;
-  email: string;
-  name: string;
-  role: string;
-};
+// type Credential = {
+//   token: string;
+//   email: string;
+//   name: string;
+//   role: string;
+// };
 
 export default function User() {
   const pathname = usePathname();
-  const [credential, setCredential] = useState<Credential | null>(null);
+const [credential, setCredential] =
+    useState<UserCredential | null>(null);
 
   useEffect(() => {
     const loadCredential = () => {
@@ -22,7 +24,7 @@ export default function User() {
 
       if (credentialString) {
         try {
-          const data: Credential = JSON.parse(credentialString);
+          const data: UserCredential = JSON.parse(credentialString);
           setCredential(data);
         } catch {
           setCredential(null);

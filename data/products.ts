@@ -35202,11 +35202,10 @@ const photos = [
 ];
 
 export type Product = {
-    filter(arg0: (p: Product) => boolean): any;
-    id: number
-    title: string
-    thumnailUrl: string
-    price: number
+    id: number;
+    title: string;
+    thumbnailUrl: string;
+    price: number;
 }
 
 // const maxOutput = 123
@@ -35249,11 +35248,11 @@ export const fetchProducts = () => {
         products = photos
           .filter((photo, index) => index < maxOutput)
           .map((photo) => ({
-            id: photo.id,
-            title: photo.title,
-            thumnailUrl: photo.thumbnailUrl,
-            price: Math.round(Math.random() * 10000) / 100,
-          }));
+    id: photo.id,
+    title: photo.title,
+    thumbnailUrl: photo.thumbnailUrl,
+    price: Math.round(Math.random() * 10000) / 100,
+}));
       }
 
       resolve(products);
